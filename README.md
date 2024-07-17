@@ -66,7 +66,7 @@ Este proyecto incluye un archivo Jenkinsfile que define el proceso de CI/CD. Ase
 apunte a tu repositorio y ejecute el pipeline definido en este archivo.
 
 ### Configuración del pipeline en Jenkins
-![url=https://postimg.cc/8jcMbtrS](https://i.postimg.cc/MKb5qL6v/img-7.png)
+[![img.png](https://i.postimg.cc/TP9hPryj/img.png)](https://postimg.cc/wt19fRQ3)
 
 
 ## 🔍 Ejecución de Pruebas
