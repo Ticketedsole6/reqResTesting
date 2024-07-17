@@ -3,7 +3,7 @@
 ## 📋 Descripción
 
 **reqResTesting** es un proyecto que se centra en la realización de pruebas automatizadas para APIs. Utiliza Java 1.8
-para el desarrollo, Maven para la gestión de dependencias y construcción del proyecto, y Jenkins para ejecutar las pruebas desde un pipeline.
+para el desarrollo, Maven para la gestión de dependencias y construcción del proyecto, se emplea Serenity REST por sus poderosas y amigables capacidades para pruebas de APIs, lo que ayuda a crear informes detallados y a gestionar escenarios de prueba complejos, y Jenkins para ejecutar las pruebas desde un pipeline.
 
 ## ⚙️ Requisitos
 
