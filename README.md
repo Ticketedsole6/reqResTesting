@@ -3,7 +3,7 @@
 ## 📋 Descripción
 
 **reqResTesting** es un proyecto que se centra en la realización de pruebas automatizadas para APIs. Utiliza Java 1.8
-para el desarrollo, Maven para la gestión de dependencias y construcción del proyecto, se emplea Serenity REST para las pruebas de APIs, lo que ayuda a crear informes detallados y a gestionar escenarios de prueba complejos, y Jenkins para ejecutar las pruebas desde un pipeline.
+para el desarrollo, Maven para la gestión de dependencias y construcción del proyecto, y Jenkins para ejecutar las pruebas desde un pipeline.
 
 ## ⚙️ Requisitos
 
@@ -29,28 +29,60 @@ para el desarrollo, Maven para la gestión de dependencias y construcción del p
     │   │       └── in/
     │   │           └── reqres/
     │   │               └── testing/
+    │   │                   ├── exceptions/
     │   │                   ├── interactions/
     │   │                   ├── models/
     │   │                   ├── questions/
-    │   │                   └── tasks/
+    │   │                   ├── tasks/
+    │   │                   └── utils/
     │   │
     │   └── test/
-    │       └── java/
-    │           └── in/
-    │               └── reqres/
-    │                   └── testing/
+    │       ├── java/
+    │       │   └── in/
+    │       │       └── reqres/
+    │       │           └── testing/
+    │       │               ├── runners/
+    │       │               └── stepdefinitions/
+    │       │
+    │       └── resources/
+    │           ├── data/
+    │           ├── features/
+    │           ├── schemas/
+    │           ├── templates/
+    │           └── serenity.conf
     │
-    ├── .gitignore
+    ├── JenkinsFile
     ├── pom.xml
-    ├── Jenkinsfile
-    └── README.md
+    └── serenity.properties
   ```
-Se usa el patrón de diseño Screenplay el cual integra serenity para que el código sea más legible, mantenible y reutilizable.
 
-- **src/main/java**: Código fuente de la aplicación.
-- **src/test/java**: Código fuente para pruebas.
-- **pom.xml**: Archivo de configuración de Maven.
-- **Jenkinsfile**: Archivo de configuración para Jenkins.
+### Carpeta `src/main/java/in/reqres/testing/`
+
+- **`exceptions/`**: Contiene clases para gestionar excepciones personalizadas específicas de la aplicación.
+- **`interactions/`**: Define interacciones con la aplicación, como acciones que los usuarios realizan.
+- **`models/`**: Incluye clases que representan los modelos de datos utilizados en las pruebas y en la aplicación.
+- **`questions/`**: Contiene clases que definen preguntas sobre el estado de la aplicación para verificar resultados.
+- **`tasks/`**: Define tareas que deben ejecutarse durante las pruebas, como acciones a realizar en la aplicación.
+- **`utils/`**: Utilidades y clases helper que proporcionan funciones auxiliares para el proyecto.
+
+### Carpeta `src/test/java/in/reqres/testing/`
+
+- **`runners/`**: Contiene clases que configuran y ejecutan los runners de prueba, como la clase que inicia las pruebas de Cucumber.
+- **`stepdefinitions/`**: Define las definiciones de pasos para las pruebas en Cucumber, especificando cómo cada paso en las características debe ser ejecutado.
+
+### Carpeta `src/test/resources/`
+
+- **`data/`**: Archivos de datos para las pruebas, como datos de entrada y salida.
+- **`features/`**: Archivos de características de Cucumber, que describen las pruebas en formato Gherkin.
+- **`schemas/`**: Esquemas que pueden ser utilizados para validar datos en las pruebas.
+- **`templates/`**: Plantillas utilizadas en las pruebas para generar datos o estructuras.
+- **`serenity.conf`**: Archivo de configuración para Serenity BDD, que define cómo se ejecutan las pruebas y cómo se generan los reportes.
+
+### Archivos en la raíz del proyecto
+
+- **`JenkinsFile`**: Archivo de configuración para Jenkins, que define cómo se deben ejecutar las builds y pruebas en el entorno de integración continua.
+- **`pom.xml`**: Archivo de configuración de Maven que especifica las dependencias del proyecto, los plugins y otros detalles de construcción.
+- **`serenity.properties`**: Archivo de configuración para Serenity BDD, utilizado para configurar aspectos específicos del marco de trabajo.
 
 ## 🚀 Instalación
 1. Clona el repositorio:
@@ -59,7 +91,7 @@ Se usa el patrón de diseño Screenplay el cual integra serenity para que el có
   ```
 2. Compila el proyecto usando Maven:
   ```sh
-  mvn clean install
+  mvn clean verify
   ```
 
 ## 🛠️ Jenkins
@@ -84,25 +116,36 @@ Para generar el reporte:
   ```
 
 ## Resultados de la Ejecución del Pipeline en Jenkins
+
 ### **Etapas ejecutadas del pipeline:**
-![url=https://postimages.org/](https://i.postimg.cc/9Fj132j6/img-6.png)
+[![steps.jpg](https://i.postimg.cc/t4ymqv4d/steps.jpg)](https://postimg.cc/ppGBkZ8y)
+
 ### **Reporte generado por serenity por medio del pipeline**
-![url=https://postimg.cc/py2Dm2Wy](https://i.postimg.cc/8kvwn5xd/img-2.png)
+[![results.jpg](https://i.postimg.cc/RFrtmyM4/results.jpg)](https://postimg.cc/LqT5ByYb)
 
-- **Test para el registro de usuario de manera exitosa**
-![url=https://postimages.org/](https://i.postimg.cc/1zYMbN9B/img-1.png)
+### **Ejecución de los Tests de la Feature Create User**
+  [![create.jpg](https://i.postimg.cc/dVPDLdbj/create.jpg)](https://postimg.cc/KRfmWKv1)
 
+#### **Ejemplo de los pasos ejecutados**
+[![example-create.jpg](https://i.postimg.cc/bvM5hQV1/example-create.jpg)](https://postimg.cc/7C391TkL)
 
-- **Test para obtener los usuarios de manera exitosa**
-![url=https://postimages.org/](https://i.postimg.cc/4yp5KLp2/img-3.png)
+### **Ejecución de los Tests de la Feature Update User Information Data**
+  [![update.jpg](https://i.postimg.cc/Xv0bfkLQ/update.jpg)](https://postimg.cc/gx4QdRfZ)
 
+#### **Ejemplo de los pasos ejecutados**
+[![example.jpg](https://i.postimg.cc/RhqxRMYT/example.jpg)](https://postimg.cc/Cny2MVSZ)
 
-- **Test para eliminar un usuario de manera exitosa**
-![url=https://postimages.org/](https://i.postimg.cc/MTMtwKHS/img-4.png)
+### **Ejecución de los Tests de la Feature Get Information to individual User**
+  [![get.jpg](https://i.postimg.cc/4x8Jg9Q5/get.jpg)](https://postimg.cc/3kvMjW64)
 
+#### **Ejemplo de los pasos ejecutados**
+[![example-get.jpg](https://i.postimg.cc/5ytQSC1k/example-get.jpg)](https://postimg.cc/JD9h1tsb)
 
-- **Test para actualizar un usuario de manera exitosa**
-![url=https://postimages.org/](https://i.postimg.cc/50hg2dQF/img-5.png)
+### **Ejecución de los Tests de la Feature Delete User**
+[![delete.jpg](https://i.postimg.cc/QMHS62Mb/delete.jpg)](https://postimg.cc/HJ1QnPXc)
+
+#### **Ejemplo de los pasos ejecutados**
+[![delete-example.jpg](https://i.postimg.cc/sD7G9sRz/delete-example.jpg)](https://postimg.cc/kBM57r4Y)
 
 ## 📧 Owner
 Este repositorio fue creado por Juan Felipe Gómez
