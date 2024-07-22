@@ -124,19 +124,19 @@ Para generar el reporte:
 [![results.jpg](https://i.postimg.cc/RFrtmyM4/results.jpg)](https://postimg.cc/LqT5ByYb)
 
 ### **Ejecución de los Tests de la Feature Create User**
-  [![create.jpg](https://i.postimg.cc/dVPDLdbj/create.jpg)](https://postimg.cc/KRfmWKv1)
+[![create.jpg](https://i.postimg.cc/dVPDLdbj/create.jpg)](https://postimg.cc/KRfmWKv1)
 
 #### **Ejemplo de los pasos ejecutados**
 [![example-create.jpg](https://i.postimg.cc/bvM5hQV1/example-create.jpg)](https://postimg.cc/7C391TkL)
 
 ### **Ejecución de los Tests de la Feature Update User Information Data**
-  [![update.jpg](https://i.postimg.cc/Xv0bfkLQ/update.jpg)](https://postimg.cc/gx4QdRfZ)
+[![update.jpg](https://i.postimg.cc/Xv0bfkLQ/update.jpg)](https://postimg.cc/gx4QdRfZ)
 
 #### **Ejemplo de los pasos ejecutados**
 [![example.jpg](https://i.postimg.cc/RhqxRMYT/example.jpg)](https://postimg.cc/Cny2MVSZ)
 
 ### **Ejecución de los Tests de la Feature Get Information to individual User**
-  [![get.jpg](https://i.postimg.cc/4x8Jg9Q5/get.jpg)](https://postimg.cc/3kvMjW64)
+[![get.jpg](https://i.postimg.cc/4x8Jg9Q5/get.jpg)](https://postimg.cc/3kvMjW64)
 
 #### **Ejemplo de los pasos ejecutados**
 [![example-get.jpg](https://i.postimg.cc/5ytQSC1k/example-get.jpg)](https://postimg.cc/JD9h1tsb)
