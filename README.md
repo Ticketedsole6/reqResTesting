@@ -99,7 +99,7 @@ Este proyecto incluye un archivo Jenkinsfile que define el proceso de CI/CD. Ase
 apunte a tu repositorio y ejecute el pipeline definido en este archivo.
 
 ### Configuración del pipeline en Jenkins
-[![img.png](https://i.postimg.cc/TP9hPryj/img.png)](https://postimg.cc/wt19fRQ3)
+![img.png](https://i.postimg.cc/TP9hPryj/img.png)
 
 
 ## 🔍 Ejecución de Pruebas
@@ -118,34 +118,34 @@ Para generar el reporte:
 ## Resultados de la Ejecución del Pipeline en Jenkins
 
 ### **Etapas ejecutadas del pipeline:**
-[![steps.jpg](https://i.postimg.cc/t4ymqv4d/steps.jpg)](https://postimg.cc/ppGBkZ8y)
+![steps.jpg](https://i.postimg.cc/t4ymqv4d/steps.jpg)
 
 ### **Reporte generado por serenity por medio del pipeline**
-[![results.jpg](https://i.postimg.cc/RFrtmyM4/results.jpg)](https://postimg.cc/LqT5ByYb)
+![results.jpg](https://i.postimg.cc/RFrtmyM4/results.jpg)
 
 ### **Ejecución de los Tests de la Feature Create User**
-[![create.jpg](https://i.postimg.cc/dVPDLdbj/create.jpg)](https://postimg.cc/KRfmWKv1)
+![create.jpg](https://i.postimg.cc/dVPDLdbj/create.jpg)
 
 #### **Ejemplo de los pasos ejecutados**
-[![example-create.jpg](https://i.postimg.cc/bvM5hQV1/example-create.jpg)](https://postimg.cc/7C391TkL)
+![example-create.jpg](https://i.postimg.cc/bvM5hQV1/example-create.jpg)
 
 ### **Ejecución de los Tests de la Feature Update User Information Data**
-[![update.jpg](https://i.postimg.cc/Xv0bfkLQ/update.jpg)](https://postimg.cc/gx4QdRfZ)
+![update.jpg](https://i.postimg.cc/Xv0bfkLQ/update.jpg)
 
 #### **Ejemplo de los pasos ejecutados**
-[![example.jpg](https://i.postimg.cc/RhqxRMYT/example.jpg)](https://postimg.cc/Cny2MVSZ)
+![example.jpg](https://i.postimg.cc/RhqxRMYT/example.jpg)
 
 ### **Ejecución de los Tests de la Feature Get Information to individual User**
-[![get.jpg](https://i.postimg.cc/4x8Jg9Q5/get.jpg)](https://postimg.cc/3kvMjW64)
+![get.jpg](https://i.postimg.cc/4x8Jg9Q5/get.jpg)
 
 #### **Ejemplo de los pasos ejecutados**
-[![example-get.jpg](https://i.postimg.cc/5ytQSC1k/example-get.jpg)](https://postimg.cc/JD9h1tsb)
+![example-get.jpg](https://i.postimg.cc/5ytQSC1k/example-get.jpg)
 
 ### **Ejecución de los Tests de la Feature Delete User**
-[![delete.jpg](https://i.postimg.cc/QMHS62Mb/delete.jpg)](https://postimg.cc/HJ1QnPXc)
+![delete.jpg](https://i.postimg.cc/QMHS62Mb/delete.jpg)
 
 #### **Ejemplo de los pasos ejecutados**
-[![delete-example.jpg](https://i.postimg.cc/sD7G9sRz/delete-example.jpg)](https://postimg.cc/kBM57r4Y)
+![delete-example.jpg](https://i.postimg.cc/sD7G9sRz/delete-example.jpg)
 
 ## 📧 Owner
 Este repositorio fue creado por Juan Felipe Gómez
